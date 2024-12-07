@@ -6,13 +6,17 @@ spring:
         gateway:
             routes:
                 -   id: et-event-microservice
-                    uri: lb://product-service
+                    uri: lb://et-event-microservice
                     predicates:
-                        - Path=/products/**
-                -   id: user-service
-                    uri: lb://user-service
+                        - Path=/event/**
+                -   id: et-internaute-microservice
+                    uri: lb://et-internaute-microservice
                     predicates:
-                        - Path=/users/**
+                        - Path=/internaute/**
+                -   id: et-ticket-microservice
+                    uri: lb://et-ticket-microservice
+                    predicates:
+                        - Path=/ticket/**
 
 eureka:
     client:
