@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: et-gateway-service
+    
+    cloud:
+        gateway:
+            routes:
+                -   id: et-event-microservice
+                    uri: lb://product-service
+                    predicates:
+                        - Path=/products/**
+                -   id: user-service
+                    uri: lb://user-service
+                    predicates:
+                        - Path=/users/**
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+            register-with-eureka: true
+            fetch-registry: true
