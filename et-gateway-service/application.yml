@@ -8,7 +8,7 @@ spring:
                 -   id: et-event-microservice
                     uri: lb://et-event-microservice
                     predicates:
-                        - Path=/event/**
+                        - Path=/evenement/**
                 -   id: et-internaute-microservice
                     uri: lb://et-internaute-microservice
                     predicates:
