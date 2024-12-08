@@ -8,15 +8,15 @@ spring:
                 -   id: et-event-microservice
                     uri: lb://et-event-microservice
                     predicates:
-                        - Path=/evenement/**
+                        - Path=${server.servlet.context-path}/evenement/**
                 -   id: et-internaute-microservice
                     uri: lb://et-internaute-microservice
                     predicates:
-                        - Path=/internaute/**
+                        - Path=${server.servlet.context-path}/internaute/**
                 -   id: et-ticket-microservice
                     uri: lb://et-ticket-microservice
                     predicates:
-                        - Path=/ticket/**
+                        - Path=${server.servlet.context-path}/ticket/**
 
 server:
     servlet:
