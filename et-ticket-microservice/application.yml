@@ -15,7 +15,7 @@ spring:
 server:
     port: 8083
     servlet:
-    context-path: /api/v1/ticket
+        context-path: /api/v1/ticket
 
 eureka:
     client:
