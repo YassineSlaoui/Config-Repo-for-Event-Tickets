@@ -13,7 +13,9 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
 
 server:
-    port: 8081
+    port: 8083
+    servlet:
+    context-path: /api/v1/ticket
 
 eureka:
     client:
