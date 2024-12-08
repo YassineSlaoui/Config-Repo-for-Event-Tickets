@@ -8,15 +8,15 @@ spring:
                 -   id: et-event-microservice
                     uri: lb://et-event-microservice
                     predicates:
-                        - Path=/evenement/**
+                        - Path=/api/v1/evenement/**
                 -   id: et-internaute-microservice
                     uri: lb://et-internaute-microservice
                     predicates:
-                        - Path=/internaute/**
+                        - Path=/api/v1/internaute/**
                 -   id: et-ticket-microservice
                     uri: lb://et-ticket-microservice
                     predicates:
-                        - Path=/ticket/**
+                        - Path=/api/v1/ticket/**
 
 eureka:
     client:
